@@ -5,7 +5,7 @@
  *@head: A pointer the head of the linked list
  *@number: The number to insert
  *
- *Return: NULL in case of failure 
+ *Return: NULL in case of failure
  *	a pointer to the new mode
  */
 
@@ -29,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 		node = node->next;
 
 	new->next = node->next;
-	node->next = new; 
+	node->next = new;
 
 	return (new);
 }
