@@ -6,3 +6,4 @@ def print_matrix_integer(matrix=[[]]):
             if j != 0:
                 print(" ", end='')
             print("{:d}".format(matrix[i][j]), end='')
+        print()
