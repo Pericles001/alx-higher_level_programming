@@ -9,31 +9,31 @@
 
 int is_palindrome(listint_t **head)
 {
-	int list[1000000], i = 0, j = 0, k = 0;
-	listint_t *temp;
+    int list[1000000], i = 0, j = 0, k = 0;
+    listint_t *temp;
 
-	if (head == NULL || (*head) == NULL)
-		return (1);
-	temp = *head;
-	while (temp)
-	{
-		list[i] = temp->n;
-		i++;
-		temp = temp->next;
-	}
-	i--;
+    if (head == NULL || (*head) == NULL)
+        return (1);
+    temp = *head;
+    while (temp)
+    {
+        list[i] = temp->n;
+        i++;
+        temp = temp->next;
+    }
+    i--;
 
-	if (i % 2 != 0)
-		k = (i + 1) / 2;
-	else
-		k = i / 2;
+    if (i % 2 != 0)
+        k = (i + 1) / 2;
+    else
+        k = i / 2;
 
-	while (j < k)
-	{
-		if (list[j] != list[i])
-			return (0);
-		i--;
-		j++;
-	}
-	return (1);
+    while (j < k)
+    {
+        if (list[j] != list[i])
+            return (0);
+        i--;
+        j++;
+    }
+    return (1);
 }
