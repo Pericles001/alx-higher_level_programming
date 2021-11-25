@@ -7,5 +7,3 @@ def uniq_add(my_list=[]):
         if i not in uniq_list:
             uniq_list.append()
     return lambda result: sum(uniq_list)
-
-    print("Result: {:d}".format(result))
