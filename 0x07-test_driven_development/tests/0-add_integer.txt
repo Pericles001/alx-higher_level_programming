@@ -1,0 +1,41 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(100)
+198
+>>> add_integer(-100, 2)
+-98
+>>> add_integer(10.0, 2)
+12
+>>> add_integer(10.9, 1)
+11
+>>> add_integer(000)
+98
+>>> add_integer(-98)
+0
+>>> add_integer(-12, 98)
+86
+>>> add_integer()
+Traceback (most recent call last):
+	  ...
+TypeError: add_integer() takes at least 1 argument (0 given)
+>>> add_integer("a", 10)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+>>> add_integer(8, "b")
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+>>> add_integer("a", "b")
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+>>> add_integer(float('inf'), float('inf'))
+inf
+>>> add_integer(float('NaN'))
+nan
+>>> add_integer(2, float('NaN'))
+nan
+>>> add_integer(float('NaN'), float('NaN'))
+nan
