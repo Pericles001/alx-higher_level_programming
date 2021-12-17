@@ -752,3 +752,201 @@ Will the last line of this script print `139926795932424`? Answer with `Yes` or 
 -   GitHub repository: `alx-higher_level_programming`
 -   Directory: `0x09-python-everything_is_object`
 -   File: `28-answer.txt`
+
+### 29\. #pythonic
+
+#advanced
+
+Score: 0.00% (Checks completed: 0.00%)
+
+Write a function `magic_string()` that returns a string "BestSchool" n times the number of the iteration (see code):
+
+-   Format: see example
+-   Your file should be maximum 4-line long (no documentation needed)
+-   You are not allowed to import any module
+
+```
+guillaume@ubuntu:~/0x09$ cat 100-main.py
+#!/usr/bin/python3
+magic_string = __import__('100-magic_string').magic_string
+
+for i in range(10):
+    print(magic_string())
+
+guillaume@ubuntu:~/0x09$ ./100-main.py | cat -e
+BestSchool$
+BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool$
+guillaume@ubuntu:~/0x09$ wc -l 100-magic_string.py
+4 100-magic_string.py
+guillaume@ubuntu:~/0x09$
+
+```
+
+**No test cases needed**
+
+**Repo:**
+
+-   GitHub repository: `alx-higher_level_programming`
+-   Directory: `0x09-python-everything_is_object`
+-   File: `100-magic_string.py`
+
+### 30\. Low memory cost
+
+#advanced
+
+Score: 0.00% (Checks completed: 0.00%)
+
+Write a class `LockedClass` with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called `first_name`.
+
+-   You are not allowed to import any module
+
+```
+guillaume@ubuntu:~/0x09$ cat 101-main.py
+#!/usr/bin/python3
+LockedClass = __import__('101-locked_class').LockedClass
+
+lc = LockedClass()
+lc.first_name = "John"
+try:
+    lc.last_name = "Snow"
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+guillaume@ubuntu:~/0x09$ ./101-main.py
+[AttributeError] 'LockedClass' object has no attribute 'last_name'
+guillaume@ubuntu:~/0x09$
+
+```
+
+**No test cases needed**
+
+**Repo:**
+
+-   GitHub repository: `alx-higher_level_programming`
+-   Directory: `0x09-python-everything_is_object`
+-   File: `101-locked_class.py`
+
+### 31\. int 1/3
+
+#advanced
+
+Score: 0.00% (Checks completed: 0.00%)
+
+```
+julien@ubuntu:/python3$ cat int.py
+a = 1
+b = 1
+julien@ubuntu:/python3$
+
+```
+
+Assuming we are using a CPython implementation of Python3 with default options/configuration:
+
+-   How many int objects are created by the execution of the first line of the script? (`103-line1.txt`)
+-   How many int objects are created by the execution of the second line of the script (`103-line2.txt`)
+
+**Repo:**
+
+-   GitHub repository: `alx-higher_level_programming`
+-   Directory: `0x09-python-everything_is_object`
+-   File: `103-line1.txt, 103-line2.txt`
+
+### 32\. int 2/3
+
+#advanced
+
+Score: 0.00% (Checks completed: 0.00%)
+
+```
+julien@ubuntu:/python3$ cat int.py
+a = 1024
+b = 1024
+del a
+del b
+c = 1024
+julien@ubuntu:/python3$
+
+```
+
+Assuming we are using a CPython implementation of Python3 with default options/configuration:
+
+-   How many int objects are created by the execution of the first line of the script? (`104-line1.txt`)
+-   How many int objects are created by the execution of the second line of the script (`104-line2.txt`)
+-   After the execution of line 3, is the int object pointed by `a` deleted? Answer with `Yes` or `No` (`104-line3.txt`)
+-   After the execution of line 4, is the int object pointed by `b` deleted? Answer with `Yes` or `No` (`104-line4.txt`)
+-   How many int objects are created by the execution of the last line of the script (`104-line5.txt`)
+
+**Repo:**
+
+-   GitHub repository: `alx-higher_level_programming`
+-   Directory: `0x09-python-everything_is_object`
+-   File: `104-line1.txt, 104-line2.txt, 104-line3.txt, 104-line4.txt, 104-line5.txt`
+
+### 33\. int 3/3
+
+#advanced
+
+Score: 0.00% (Checks completed: 0.00%)
+
+```
+julien@twix:/tmp/so$ cat int.py
+print("I")
+print("Love")
+print("Python")
+julien@ubuntu:/tmp/so$
+
+```
+
+Assuming we are using a CPython implementation of Python3 with default options/configuration:
+
+-   Before the execution of line 2 (`print("Love")`), how many int objects have been created and are still in memory? (`105-line1.txt`)
+-   Why? (optional blog post :))
+
+Hint: `NSMALLPOSINTS`, `NSMALLNEGINTS`
+
+![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/70f9ea0e969dfcc407a7427aba4786d87a920494.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20211217%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211217T122124Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=d51037ace1efdb11b01809600489a7c4c4abb9b41d339b48b63808b661c50244)
+
+**Repo:**
+
+-   GitHub repository: `alx-higher_level_programming`
+-   Directory: `0x09-python-everything_is_object`
+-   File: `105-line1.txt`
+
+### 34\. Clear strings
+
+#advanced
+
+Score: 0.00% (Checks completed: 0.00%)
+
+```
+guillaume@ubuntu:/python3$ cat string.py
+a = "SCHL"
+b = "SCHL"
+del a
+del b
+c = "SCHL"
+guillaume@ubuntu:/python3$
+
+```
+
+Assuming we are using a CPython implementation of Python3 with default options/configuration (For answers with numbers use integers, don't spell out the word):
+
+-   How many string objects are created by the execution of the first line of the script? (`106-line1.txt`)
+-   How many string objects are created by the execution of the second line of the script (`106-line2.txt`)
+-   After the execution of line 3, is the string object pointed by `a` deleted? Answer with `Yes` or `No` (`106-line3.txt`)
+-   After the execution of line 4, is the string object pointed by `b` deleted? Answer with `Yes` or `No` (`106-line4.txt`)
+-   How many string objects are created by the execution of the last line of the script (`106-line5.txt`)
+
+**Repo:**
+
+-   GitHub repository: `alx-higher_level_programming`
+-   Directory: `0x09-python-everything_is_object`
+-   File: `106-line1.txt, 106-line2.txt, 106-line3.txt, 106-line4.txt, 106-line5.txt`
