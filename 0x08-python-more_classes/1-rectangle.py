@@ -1,74 +1,44 @@
 #!/usr/bin/python3
-"""
-This module is composed by a class that defines a rectangle
-"""
+# 1-rectangle.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a Rectangle class."""
+
 
 class Rectangle:
-    """Class to define a rectangle"""
+    """Represent a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """ Method to initialize the instance
+        """Initialize a new Rectangle.
 
         Args:
-            width: width of the rectangle
-            height: height of the rectangle
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Method that returns the width value
-
-        Returns:
-        width of the rectangle
-
-        """
-
+        """Get/set the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Method that defines the width value
-
-        Args:
-            value: width
-        Raises:
-            TypeError: if width is not an integer
-            ValueError: if width is less than zero
-
-        """
-
         if not isinstance(value, int):
-            raise TypeError("Width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("Width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
-        @property
-        def height(self):
-            """Method that returns the value of the height
+    @property
+    def height(self):
+        """Get/set the height of the rectangle."""
+        return self.__height
 
-            Returns: 
-                Height of the rectangle
-            """
-
-            return self.__height
-
-        @height.setter
-        def height(self, value):
-            """Method that defines the height
-
-            Args:
-                value: height
-
-            Raises:
-                TypeError: if height is not an integer
-                ValueError: if height is less than zero
-            """
-
-            if not isinstance(value, int):
-                raise TypeError("height must be an integer")
-            elif value < 0:
-                raise ValueError("height must be >= 0")
-            self.__height = value
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
