@@ -68,7 +68,7 @@ class Rectangle:
     def __repr__(self):
         """Return the string representation of the rectangle"""
         rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height + ")"
+        rect += ", " + str(self.__height) + ")"
         return (rect)
 
 
