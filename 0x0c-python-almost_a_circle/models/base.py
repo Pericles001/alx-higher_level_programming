@@ -19,11 +19,11 @@ class Base:
                 id (int): The identity of the new base
         """
 
-    if id is not None:
-        self.id = id
-    else:
-        __nb__objects += 1
-        self.id = Base.__nb__objects
+        if id is not None:
+            self.id = id
+        else:
+         Base.__nb__objects += 1
+         self.id = Base.__nb__objects
 
 
 
