@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Module that represent base model class"""
-
+import json
+import csv
+import turtle
 
 class Base:
     """Base model representation
@@ -27,3 +29,13 @@ class Base:
 
 
 
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Return the JSON serialization of a list of dicts.
+
+        Args:
+            list_dictionaries (list): A list of dictionaries.
+        """
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
