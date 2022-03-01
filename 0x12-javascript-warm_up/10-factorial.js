@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const { argv } = require('process');
 const factorial = (n) => {
-  if (n === 0 || isNaN(n)) {
+  if (isNaN(n) || n === 0) {
     return 1;
   }
   return n * factorial(n - 1);
