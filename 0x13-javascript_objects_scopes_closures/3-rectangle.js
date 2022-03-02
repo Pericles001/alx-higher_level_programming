@@ -5,10 +5,8 @@ module.exports = class Rectangle {
   }
 
   print () {
-    let line = '';
     for (let i = 0; i < this.height; i++) {
-      line += 'X';
-      console.log(line.repeat(this.width));
+      console.log('X'.repeat(this.width));
     }
   }
 };
