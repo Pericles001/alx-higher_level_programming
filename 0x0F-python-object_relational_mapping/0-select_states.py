@@ -11,3 +11,4 @@ if __name__ == "__main__":
     c = db.cursor()
     c.execute("SELECT * FROM `states`")
     [print(state) for state in c.fetchall()]
+
