@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-# takes in an argument
-#  and displays all values
-#  in the states table of
-# hbtn_0e_0_usa where name matches the argument
-# Usage: ./2-my_filter_states.py <mysql username>
-#                                <mysql password>
-#                                <database name>
-#                                <state name searched>
+""" takes in an argument
+  and displays all values
+  in the states table of
+ hbtn_0e_0_usa where name matches the argument
+ Usage: ./2-my_filter_states.py <mysql username>
+                                <mysql password>
+                                <database name>
+                                <state name searched>
+"""
 import sys
 import MySQLdb
 
