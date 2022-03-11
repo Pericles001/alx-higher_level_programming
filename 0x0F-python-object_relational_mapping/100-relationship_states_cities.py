@@ -5,6 +5,7 @@ database hbtn_0e_100_usa: (100-relationship_states_cities.py)
 """
 
 import sys
+from unicodedata import name
 from venv import create
 from sqlalchemy import create_engine, true
 from sqlalchemy.orm import sessionmaker
@@ -17,5 +18,5 @@ if __name__ == "__main__":
     session_maker = sessionmaker(bind=engine)
     session = session_maker()
 
-    session.add(State(name="California", cities=[City(name="San Francisco")]))
+    session.add(City(name="San Francisco", state=State(name="California")))
     session.commit()
